@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+ <ImageView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:src="@drawable/splash_screen"
+     android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Beer Craft"
+        android:textColor="#FFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-light"/>
+
+    <TextView
+        android:layout_below="@id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/beer_quote"
+        android:textColor="#FFF"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="50dp"/>
+</RelativeLayout>

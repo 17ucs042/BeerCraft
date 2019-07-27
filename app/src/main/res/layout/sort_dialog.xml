@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <CheckBox
+        android:id="@+id/increasing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Increasing order of alcohol content" />
+
+    <CheckBox
+        android:id="@+id/decreasing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decreasing order of alcohol content"
+        android:layout_below="@id/increasing"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/add_background"
+        android:text="done"
+        android:layout_below="@id/decreasing"
+        android:layout_marginTop="10dp"
+        android:textColor="#FFF"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

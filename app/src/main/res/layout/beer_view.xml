@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/complete_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_toLeftOf="@id/add_button"
+        android:layout_toStartOf="@id/add_button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:id="@+id/display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/beer_icon" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/display"
+            android:layout_toRightOf="@id/display"/>
+
+        <TextView
+            android:id="@+id/style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="style"
+            android:textColor="#000"
+            android:layout_below="@id/name"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/display"
+            android:layout_toRightOf="@id/display"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:minLines="2"/>
+
+        <TextView
+            android:id="@+id/beer_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/style"
+            android:text="content"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/display"
+            android:layout_toRightOf="@id/display"/>
+
+        <TextView
+            android:id="@+id/bitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/beer_content"
+            android:text="bitter"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/display"
+            android:layout_toRightOf="@id/display"/>
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bitter"
+            android:text="size"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/display"
+            android:layout_toRightOf="@id/display"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/add_background"
+        android:text="Add"
+        android:textColor="#FFFFFF"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_above="@id/view"/>
+
+    <LinearLayout
+        android:id="@+id/add_layout"
+        android:layout_width="99dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_above="@id/view"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/subtract_beer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:focusable="false"
+            android:src="@drawable/subtract" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#DC143C"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/add_beer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/button_border"
+            android:focusable="false"
+            android:src="@drawable/add"
+            android:scaleType="center"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/complete_view"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#BBC3CC"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>

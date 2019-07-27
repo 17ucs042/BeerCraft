@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Beer Craft</string>
+
+    <string name="beer_quote">There is no such thing\nas a bad beer. It\'s that\nsome taste better than others. </string>
+</resources>
